@@ -4,7 +4,7 @@ import { createUser } from '../../database/methods/index.js'
 
 export const startCommand = async ctx => {
   try {
-    const from = ctx.update.message.from
+    const user = ctx.update.message.from
     await ctx.reply(ctx.t('start', { first_name: ctx.me.first_name }))
 
     await ctx.reply(
@@ -20,7 +20,7 @@ export const startCommand = async ctx => {
       }
     )
 
-    createUser(from)
+    createUser(user)
   } catch (e) {
     console.log(e)
   }

@@ -1,4 +1,4 @@
-import { InlineKeyboard } from "grammy"
+import { InlineKeyboard } from 'grammy'
 
 export const auditInlineKeyboard = (chain, address) => {
   return new InlineKeyboard()
